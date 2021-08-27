@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div style="background-color: red;width: 100px;height: 100px;position: absolute;left: 0;top: 0;"></div>
+
+    <ul>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+    </ul> -->
+
+    <input style="border: 1px solid 0x8c8c8c" type="text">
+
+    <script>
+        // console.log(document.readyState);
+        // window.onload = function() {
+        //     console.log(document.readyState);
+        // }
+
+        console.log(document.readyState);
+
+        document.onreadystatechange = function() {
+            console.log(document.readyState);
+        }
+
+        /*  无效
+        document.onDOMcontentLoad = function() {
+            console.log('a');
+        } */
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('a');
+        }, false);
+    </script>
+
+    <script>
+        /* var input = document.getElementsByTagName('input')[0];
+
+                                                                                                input.oninput = function(e) {
+                                                                                                    console.log(this.value);
+                                                                                                }
+                                                                                                input.onchange = function(e) {
+                                                                                                    console.log(this.value);
+                                                                                                } */
+
+        /* window.onscroll = function() {
+            console.log(window.pageXOffset + " " + window.pageYOffset);
+        } */
+    </script>
+
+    <script>
+        // var div = document.getElementsByTagName('div')[0];
+
+        /* div.onclick = function() {
+            console.log("a");
+        } */
+
+        /* div.addEventListener('click', function() {
+            console.log('a');
+        }, false);
+        div.addEventListener('click', function() {
+            console.log('b');
+        }, false) */
+
+
+        /* function test() {
+            console.log('a');
+        }
+
+        div.addEventListener('click', test, false);
+        div.addEventListener('click', test, false) */
+
+
+        /* var lis = document.getElementsByTagName('li');
+        var n = lis.length;
+        for (var i = 0; i < n; i++) {
+            (function(i) {
+                lis[i].addEventListener('click', function() {
+                    console.log(i);
+                }, false);
+            }(i))
+        } */
+
+        /* function click(i) {
+            console.log(i);
+        }
+
+        var lis = document.getElementsByTagName('li');
+        var n = lis.length;
+        for (var i = 0; i < n; i++) {
+            (function(i) {
+                lis[i].addEventListener('click', function() {
+                    console.log(i);
+                }, false);
+            }(i))
+        } */
+        /* function addEvent(ele, type, handle) {
+            if (ele.addEventListener) {
+                ele.addEventListener(type, handle, false)
+            } else if (ele.attachEvent) {
+                ele.attachEvent('on' + type, function() {
+                    handle.call(ele);
+                });
+            } else {
+                ele['on' + type] = handle
+            }
+        } */
+
+        /* document.onclick = function() {
+            console.log("我好闲");
+        }
+
+        div.addEventListener('click', function(e) {
+            this.style.backgroundColor = 'green';
+            // e.stopPropagation();
+            e.cancelBubble = true;
+        }, false) */
+
+        /* function stopBubble(event) {
+            if (event.stopPropagtion) {
+                event.stopPropagtion();
+            } else {
+                event.cancelBubble = true;
+            }
+        } */
+        /* document.oncontextmenu = function(e) {
+            console.log('a');
+            // return false;
+            e.preventDefault();
+
+        } */
+        /* function cancelHandler(event) {
+            if (event.preventDefault) {
+                event.preventDefault();
+            } else {
+                event.returnValue = false;
+            }
+        } */
+
+        /* var ul = document.getElementsByTagName('ul')[0];
+
+        ul.onclick = function(e) {
+            var event = e || window.event;
+            var target = event.target || event.srcElement;
+
+            console.log(target.innerText);
+        } */
+
+        /* var disX,
+            disY;
+
+        div.onmousedown = function(e) {
+
+            disX = e.pageX - parseInt(div.style.left);
+            disY = e.pageY - parseInt(div.style.top);
+
+            document.onmousemove = function(e) {
+                var event = e || window.event;
+
+                // console.log(e.pageX + ' ' + e.pageY);
+
+                div.style.left = e.pageX - disX + 'px';
+                div.style.top = e.pageY - disY + 'px';
+            }
+
+            document.onmouseup = function() {
+                div.onmousemove = null;
+            }
+        } */
+
+        /* document.onmousedown = function(e) {
+            if (e.button == 2) {
+                console.log('right');
+            } else if (e.button == 0) {
+                console.log('left');
+            } else {
+                console.log('mid');
+            }
+        } */
+
+        /* document.onkeydown = function() {
+            console.log('down');
+        }
+        document.onkeypress = function() {
+                console.log('pres');
+            }
+        document.onkeyup = function() {
+            console.log('up');
+        } */
+    </script>
+</body>
+
+</html>

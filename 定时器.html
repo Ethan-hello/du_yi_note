@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            border: 1px solid rgba(0, 0, 0, .5);
+            text-align: right;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    minutes: <input type="text" value="0"> seconds: <input type="text" value="0">
+    <script>
+        // var date = new Date();
+        // // Sun Aug 15 2021 13:48:41 GMT+0800 (中国标准时间)
+
+        // console.log(date.getDate()); // 1 ~ 31
+        // console.log(date.getDay()); //0 ~ 6， 古希腊人认为 星期天 是第一天， 所以是 0
+        // console.log(date.getMonth()); // 0 ~ 11
+        // console.log(date.getYear()); // 返回 从 1900年开始 ，多少年
+        // console.log(date.getFullYear()); // 返回 现在的年份
+        // console.log(date.getHours()); // 0 ~ 23
+        // console.log(date.getMinutes()); // 0 ~ 59
+        // console.log(date.getSeconds()); // 0 ~ 59
+        // console.log(date.getMilliseconds()); // 毫秒 0 ~ 999
+        // console.log(date.getTime()); // 返回 1970 年 1 月 1 日至今的毫秒数, 常用， 用来计算 时间差
+        // console.log(date.getTimezoneOffset()); // 返回本地时间与格林威治标准时间（GMT）的分钟差
+        // console.log(date.getUTCDate()); // 根据世界时从 Date 对象返回月中的一天（1 ~ 31）
+        // console.log(date.getUTCDay()); // 根据世界时从 Date 对象返回周中的一天（0 ~ 6）
+
+        /* var left = new Date().getTime();
+
+        for (var i = 0; i < 100000000; i++);
+
+        var right = new Date().getTime();
+        console.log(right - left); */
+
+        /* var i = 0;
+        var timer = setInterval(function() {
+            console.log('我真帅');
+            i++;
+            if (i == 10) {
+                clearInterval(timer); // 参数是 setInterval 的唯一标识
+            }
+
+        }, 1000); */
+
+        /* setInterval("console.log('a');", 1000) */
+
+        /* var input1 = document.getElementsByTagName('input')[0];
+        var input2 = document.getElementsByTagName('input')[1];
+
+        var second = Number(input2.getAttribute('value'));
+        var minute = Number(input1.getAttribute('value'));
+
+        timer = setInterval(function() {
+
+            second++;
+            if (second >= 0 && second <= 59) {
+                input2.setAttribute('value', '' + second);
+            } else if (second > 59) {
+                minute++;
+                second %= 60;
+                input2.setAttribute('value', '' + second);
+                input1.setAttribute('value', '' + minute);
+            }
+            if (minute == 3) {
+                clearInterval(timer);
+            }
+        }, 100) */
+
+        var input1 = document.getElementsByTagName('input')[0];
+        var input2 = document.getElementsByTagName('input')[1];
+
+        var minute = 0,
+            second = 0;
+        var timer = setInterval(function() {
+            second++;
+            if (second == 60) {
+                second = 0;
+                minute++;
+            }
+
+            input1.value = minute;
+            input2.value = second;
+            if (minute == 6) {
+                clearInterval(timer);
+            }
+        }, 10);
+    </script>
+</body>
+
+</html>

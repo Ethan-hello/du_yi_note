@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 实现滑滑消
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        li {
+            float: left;
+            width: 10px;
+            height: 10px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        
+        ul {
+            list-style: none;
+            width: 100px;
+            height: 100px;
+        }
+    </style> -->
+
+
+</head>
+
+<body>
+    <!-- 实现滑滑消
+    <ul>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+    </ul> -->
+
+    <!-- 实现滑滑消
+    <script>
+        
+        var ul = document.getElementsByTagName('ul')[0];
+
+        ul.onmouseover = function(e) {
+            var event = e || window.event;
+            var target = event.target || event.srcElement;
+
+            target.style.backgroundColor = "rgb(255, 255, " + target.getAttribute('img-date') + ")";
+            target.setAttribute('img-date', parseInt(target.getAttribute('img-date')) + 10);
+
+        }
+    </script> -->
+</body>
+
+</html>

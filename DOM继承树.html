@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div>
+        <strong>
+            <span>
+                <i></i>
+            </span>
+        </strong>
+        <div></div>
+        <strong></strong>
+        <p></p>
+    </div> -->
+
+    <div>
+        <span>123</span>
+        <strong>234</strong>
+    </div>
+
+    <script>
+        // var i = document.getElementsByTagName('i')[0];
+        // var retParent = function(node, n) {
+        //     var pNode = node;
+        //     for (var i = 0; i < n; i++) {
+        //         if (pNode.parentNode === null) {
+        //             return 'error';
+        //         }
+        //         pNode = pNode.parentNode;
+        //     }
+
+        //     return pNode;
+        // }
+
+        /* var div = document.getElementsByTagName('div')[0];
+        var secondDiv = document.getElementsByTagName('div')[1];
+        var i = document.getElementsByTagName('i')[0]; */
+
+        /* var myChildren = function(node) {
+            var arr = [];
+            var children = node.childNodes;
+
+            for (var child in children) {
+                if (children[child].nodeType == 1) {
+                    arr.push(children[child])
+                }
+            }
+
+            return arr;
+        } */
+
+        /*  Element.prototype.myChildren = function() {
+             var arr = [];
+             var children = this.childNodes;
+
+             for (var child in children) {
+                 if (children[child].nodeType == 1) {
+                     arr.push(children[child])
+                 }
+             }
+
+             return arr;
+         }
+
+         Element.prototype.hasChildren = function() {
+             var arr = [];
+             var children = this.childNodes;
+
+             for (var child in children) {
+                 if (children[child].nodeType == 1) {
+                     return true;
+                 }
+             }
+
+             return false;
+         }
+
+         var retSibling = function(e, n) {
+             while (e && n) {
+                 if (n > 0) {
+                     if (e.nextElementSibling) {
+                         e = e.nextElementSibling;
+                     } else {
+                         for (e = e.nextSibling; e && e.nodeType != 1; e = e.nextSibling);
+                     }
+
+                     n--;
+                 } else {
+                     if (e.previousElementSibling) {
+                         e = e.previousElementSibling;
+                     } else {
+                         for (e = e.previousSibling; e && e.nodeType != 1; e = e.oreviousSibling);
+                     }
+                     n++;
+                 }
+             }
+
+             return e;
+         } */
+
+        /* var div = document.createElement('div');
+        div.innerHTML = 123;
+
+        document.body.appendChild(div);
+
+        var text = document.createTextNode('lorem');
+        div.appendChild(text);
+
+        var span = document.createElement('span');
+        var text1 = document.createTextNode('demo');
+        div.appendChild(span);
+        span.appendChild(text1); */
+
+        var div = document.getElementsByTagName('div')[0];
+        console.log(div.innerHTML);
+        div.innerHTML = 123; // 赋值会覆盖原有内容
+        console.log(div.innerHTML);
+    </script>
+</body>
+
+</html>

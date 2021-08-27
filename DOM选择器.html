@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div>
+        <strong></strong>
+    </div>
+
+    <div>
+        <span>
+            <strong class="demo"></strong>
+        </span>
+    </div>
+    <script>
+        var strong = document.querySelector('div > span strong.demo');
+        var strong1 = document.querySelectorAll('div > span strong.demo')
+    </script> -->
+
+    <div>123
+        <!--  -->
+        <strong></strong>
+        <span></span>
+        <div>
+            <p class="demo" id="only">&lt;Lorem ipsum dolor sit.</p>
+        </div>
+    </div>
+
+    <!-- <script>
+        var p = document.getElementsByTagName('p')[0];
+        console.log(p.parentNode);
+        var div = document.getElementsByTagName('div')[0]
+        console.log(div.childNodes); // 包含文本节点        
+        console.log(div.childNodes.length);
+        console.log(div.firstChild);
+        console.log(div.lastChild);
+        var span = document.getElementsByTagName('span')[0];
+        console.log(span.nextSibling);
+        console.log(span.previousSibling);
+    </script> -->
+
+    <script>
+        var p = document.getElementsByTagName('p')[0];
+        console.log(p.attributes);
+        console.log(p.attributes[0].name);
+        console.log(p.attributes[0].value);
+        console.log(p.parentElement);
+        var div = document.getElementsByTagName('div')[0];
+        console.log(div.children);
+        console.log(div.childElementCount);
+        console.log(div.firstElementChild);
+        console.log(div.lastElementChild);
+        var span = document.getElementsByTagName('span')[0];
+        console.log(span.nextElementSibling);
+        console.log(span.previousElementSibling);
+    </script>
+</body>
+
+</html>
